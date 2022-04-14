@@ -1,7 +1,6 @@
 startProgram = async function () {
   await drone.takeOff();
 };
-
 keyPressListeners.pressed.ArrowUp = async function () {
   await drone.fly("forward", 0.1, 100);
 };
@@ -19,4 +18,10 @@ keyPressListeners.pressed.q = async function () {
 };
 keyPressListeners.pressed.e = async function () {
   await drone.fly("up", 0.1, 100);
+};
+keyPressListeners.pressed.f = async function () {
+  await drone.flip();
+};
+keyPressListeners.pressed.p = async function () {
+  await drone.takePicture();
 };
